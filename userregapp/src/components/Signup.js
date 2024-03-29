@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from "react"
 import axios from "axios"
 import { useNavigate,Link} from "react-router-dom"
-
+import '../App.css'
 
 function Login() {
 
@@ -37,18 +37,31 @@ function Login() {
 
     return(
         <div className="login">
-             <h1>Signup</h1>
             <form action="POST">
-                <input type="email" name="" id="" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email" />
-                <input type="password" name="" id="" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password" />
-                <input type="Submit" onClick={submit}/>
+             <fieldset id="login_sty">
+                <legend id="leg">Sign Up</legend>
+                <table>
+                <tr>
+                    <td colSpan={2} align="center"><input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter the email" />
+               </td>
+                </tr>
+                <tr>
+                    <td colSpan={2} align="center"><input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Enter the password" />
+               </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"/>Remember Me</td>
+                    <td colSpan={1} id="for">Forget Password?</td>
+                </tr>
+                <tr>
+                    <td colSpan={2} align="center"><button onClick={submit}>Register</button></td>
+                </tr>
+                <tr>
+                    <td colSpan={2} align="center">Keep me Logged in<Link to="/" id="signUp">LOGIN</Link></td>
+                </tr>
+                </table>
+             </fieldset>
             </form>
-
-            <br />
-            <p>OR</p>
-            <br />
-
-            <Link to="/">Login Page</Link>
         </div>
     )
 }

@@ -17,8 +17,15 @@ fieldset{
     width: 450px;
     border-radius: 20px;
     background-color: white;
-    font-size: 25px;
+    font-size: 20px;
     transition: 1s;
+}
+#leg{
+    background-color: #0047AB;
+    color: white;
+    font-size: medium;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 td{
     font-size: 15px;
@@ -27,9 +34,11 @@ td{
 input[type="email"],input[type="password"]{
     width: 390px;
     padding: 10px;
-    transition: 0.3s;
     border: none;
     box-shadow: 0 1.4px #0047AB ;
+}
+input[type="email"]:focus,input[type="password"]:focus{
+    outline: none;
 }
 #for{
     text-align: right;
@@ -39,12 +48,25 @@ button{
     background-color: #8364e8;
     color: white;
     border: none;
-    transition: 0.3;
 }
-input[type="email"]:hover,input[type="password"]:hover,button:hover{
+button,input[type="email"],input[type="password"]{
+    transition: 0.2s;
+}
+input[type="email"]:hover,input[type="password"]:hover,button:hover,#leg:hover{
     box-shadow: 0 0 8px #0047AB;
     transform: scale(1);
+    font-weight: bold;
 }
 fieldset:hover{
     transform: scale(1.2);
+}
+#signUp{
+    padding: 5px;
+    text-decoration: none;
+}
+#signUp:hover{
+    color: #0047AB;
+    border: none;
+    font-weight: bold;
+    
 }
