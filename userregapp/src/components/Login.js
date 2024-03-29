@@ -39,26 +39,25 @@ function Login(){
         <div className="login">
             <form action="POST">
              <fieldset id="login_sty">
-                <legend>Login</legend>
+                <legend id="leg">Login</legend>
                 <table>
                 <tr>
-                    <td colSpan={2}><input type="email" name="" id="" onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter the email" />
+                    <td colSpan={2} align="center"><input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter the email" />
                </td>
                 </tr>
                 <tr>
-                    <td colSpan={2}><input type="password" name="" id="" onChange={(e) => { setPassword(e.target.value) }} placeholder="Enter the password" />
+                    <td colSpan={2} align="center"><input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Enter the password" />
                </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"/>Remember Me</td>
+                    <td colSpan={1} id="for">Forget Password?</td>
                 </tr>
                 <tr>
                     <td colSpan={2} align="center"><button onClick={submit}>SIGN IN</button></td>
                 </tr>
                 <tr>
-                    <td><input type="radio"/>Remember Me</td>
-                    <td><p>Forget Password?</p></td>
-                </tr>
-                <tr>
-                    <td>Don't have an account?</td>
-                    <td><Link to="/signup">SignUp</Link></td>
+                    <td colSpan={2} align="center">Don't have an account?<Link to="/signup" id="signUp">SIGN UP</Link></td>
                 </tr>
                 </table>
              </fieldset>

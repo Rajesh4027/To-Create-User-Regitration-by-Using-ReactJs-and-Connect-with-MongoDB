@@ -3,42 +3,48 @@
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
+
 }
 body{
     background: #8364e8;
-}
-fieldset{
-    border-radius: 15px;
-    background-color: white;
-    
-}
-#login_sty{
-    margin: 100px 500px;
-    padding: 40px; 
+    padding: 200px;
 }
 table{
-    margin: auto;
+    margin:auto;
+}
+fieldset{
+    margin: 0 auto;
+    width: 450px;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 25px;
+    transition: 1s;
 }
 td{
-    padding-top: 20px;
+    font-size: 15px;
+    padding-top:10px;
 }
-input,button{
-    padding:13px 80px;
-    border-radius: 20px;
-    border-style: none;
-    box-shadow: 0 0 5px #4D4DFF;
-    
+input[type="email"],input[type="password"]{
+    width: 390px;
+    padding: 10px;
+    transition: 0.3s;
+    border: none;
+    box-shadow: 0 1.4px #0047AB ;
+}
+#for{
+    text-align: right;
 }
 button{
-    background-color: #0073AF;
+    padding: 10px 20px;
+    background-color: #8364e8;
     color: white;
-    transition: 0.5s;
+    border: none;
+    transition: 0.3;
 }
-input:hover,button:hover{
-    box-shadow: 0 0 15px #4D4DFF;
-    
+input[type="email"]:hover,input[type="password"]:hover,button:hover{
+    box-shadow: 0 0 8px #0047AB;
+    transform: scale(1);
 }
-button:hover{
-    background-color: #0047AB;
+fieldset:hover{
+    transform: scale(1.2);
 }
-
