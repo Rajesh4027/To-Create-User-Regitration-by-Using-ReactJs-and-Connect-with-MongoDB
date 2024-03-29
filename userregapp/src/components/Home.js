@@ -1,9 +1,5 @@
-import React,{useEffect, useState} from "react"
-import { useNavigae,Link, useLocation} from "react-router-dom";
-
+import React from "react"
 function Home() {
-    const location=useLocation()
-
     return(
         <div className="homepage">
 
@@ -12,5 +8,4 @@ function Home() {
         </div>
     )
 }
-
 export default Home

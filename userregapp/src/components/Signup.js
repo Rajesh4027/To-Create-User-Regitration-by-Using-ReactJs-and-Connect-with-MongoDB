@@ -22,7 +22,7 @@ function Login() {
                     alert("user already exists")
                 }
                 else if(res.data=="notexist"){
-                    history("/home",{state:{id:email}})
+                    history("/")
                 }
             })
             .catch(e=>{
