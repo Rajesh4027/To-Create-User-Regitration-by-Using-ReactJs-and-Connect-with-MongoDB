@@ -34,11 +34,6 @@ button{
     color: white;
     transition: 0.5s;
 }
-@media (min-width:500px) and (max-width:900px){
-    #login_sty{
-        background-color: yellow;
-    }
-}
 input:hover,button:hover{
     box-shadow: 0 0 15px #4D4DFF;
     
@@ -46,7 +41,4 @@ input:hover,button:hover{
 button:hover{
     background-color: #0047AB;
 }
-/* button{
-    margin-right: 9px;
-    padding: 6px 143px;
-} */
+
