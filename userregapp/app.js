@@ -12,7 +12,7 @@ app.get("/",cors(),(req,res)=>{
 })
 
 app.post("/",async(req,res)=>{
-    const {email,password}=req.body
+    const {name,email,password}=req.body
     
 
     try{
@@ -32,9 +32,10 @@ app.post("/",async(req,res)=>{
 
 
 app.post("/signup",async(req,res)=>{
-    const{email,password}=req.body
+    const{name,email,password}=req.body
 
     const data={
+        name:name,
         email:email,
         password:password
     }

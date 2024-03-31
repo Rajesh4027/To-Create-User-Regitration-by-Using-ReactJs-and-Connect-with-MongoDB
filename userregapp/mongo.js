@@ -9,6 +9,10 @@ mongoose.connect("mongodb://localhost:27017/react-login-tut")
 })
 
 const newSchema=new mongoose.Schema({
+    name:{
+        type:String,
+        required:true
+    },
     email:{
         type:String,
         required:true

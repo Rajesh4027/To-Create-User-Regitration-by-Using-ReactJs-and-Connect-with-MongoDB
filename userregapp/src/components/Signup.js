@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from "react"
+import React,{ useState} from "react"
 import axios from "axios"
 import { useNavigate,Link} from "react-router-dom"
 import '../App.css'
@@ -7,6 +7,7 @@ function Login() {
 
     const history=useNavigate();
 
+    const [name,setName]=useState('')
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
 
@@ -15,7 +16,7 @@ function Login() {
 
         try{
             await axios.post("http://localhost:8000/signup",{
-                email,password
+                name,email,password
             })
             .then(res=>{
                 if(res.data=="exist"){
@@ -41,24 +42,25 @@ function Login() {
              <fieldset id="login_sty">
                 <legend id="leg">Sign Up</legend>
                 <table>
-                <tr>
-                    <td colSpan={2} align="center"><input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter the email" />
-               </td>
-                </tr>
-                <tr>
-                    <td colSpan={2} align="center"><input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Enter the password" />
-               </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"/>Remember Me</td>
-                    <td colSpan={1} id="for">Forget Password?</td>
-                </tr>
-                <tr>
-                    <td colSpan={2} align="center"><button onClick={submit}>Register</button></td>
-                </tr>
-                <tr>
-                    <td colSpan={2} align="center">Keep me Logged in<Link to="/" id="signUp">LOGIN</Link></td>
-                </tr>
+                    <tr>
+                        <td colSpan={2} align="center"><input type="text" onChange={(e) => { setName(e.target.value) }} placeholder="Enter your name" /></td>
+                    </tr>
+                    <tr>
+                        <td colSpan={2} align="center"><input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter the email" /></td>
+                    </tr>
+                    <tr>
+                        <td colSpan={2} align="center"><input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Enter the password" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"/>Remember Me</td>
+                        <td colSpan={1} id="for">Forget Password?</td>
+                    </tr>
+                    <tr>
+                        <td colSpan={2} align="center"><button onClick={submit}>Register</button></td>
+                    </tr>
+                    <tr>
+                        <td colSpan={2} align="center">Keep me Logged in<Link to="/" id="signUp">LOGIN</Link></td>
+                    </tr>
                 </table>
              </fieldset>
             </form>

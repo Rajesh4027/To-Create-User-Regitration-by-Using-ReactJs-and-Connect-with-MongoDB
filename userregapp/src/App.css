@@ -35,13 +35,13 @@ td{
     font-size: 15px;
     padding-top:10px;
 }
-input[type="email"],input[type="password"]{
+input[type="email"],input[type="password"],input[type="text"]{
     width: 390px;
     padding: 10px;
     border: none;
     box-shadow: 0 1.4px #0047AB ;
 }
-input[type="email"]:focus,input[type="password"]:focus{
+input[type="email"]:focus,input[type="password"]:focus,input[type="text"]:focus{
     outline: none;
 }
 #for{
@@ -56,7 +56,7 @@ button{
 button,input[type="email"],input[type="password"]{
     transition: 0.2s;
 }
-input[type="email"]:hover,input[type="password"]:hover,button:hover,#leg:hover{
+input[type="email"]:hover,input[type="password"]:hover,button:hover,#leg:hover,input[type="text"]:hover{
     box-shadow: 0 0 8px #0047AB;
     transform: scale(1);
     font-weight: bold;
@@ -80,7 +80,7 @@ fieldset:hover{
     }div{
         padding: 20px 10px;
         background-color: #fff;
-        text-align: center;
+        text-align: right;
         margin: 10px 20px;
         border-radius: 10px;
         
@@ -88,7 +88,7 @@ fieldset:hover{
     div>a{
         margin-left: 20px;
         text-decoration: none;
-        background-color: orange;
+        background-color:  #0047AB;
         border-radius: 15px;
         padding: 8px 18px;
         color: white;
@@ -99,8 +99,21 @@ fieldset:hover{
         color: white;
         box-shadow: 0 0 10px #0047AB;
     }
-    #hel{
-        /* margin-right: 600px; */
+    span{
+        padding-right: 65px;
+        font-weight: bold;
+        position: static;
     }
-    
+    .he{
+        margin: 0px 14px -9px;
+        cursor: pointer;
+    }
+    #helo{
+        font-size: 30px;
+        margin: 0px 11px -9px;
+        cursor: pointer;
+    }
+    #im{
+        margin-bottom: -20px;
+    }
 }
