@@ -18,7 +18,7 @@ function Home() {
                  <a href="">Enquery</a>
                  <FaCircleUser className="he" style={{ fontSize : 30 }}  onClick={() =>{
                 setVisible(true);
-             }} />63
+             }} />
              </div>
              <Drawer
                 visible={visible}
@@ -33,7 +33,6 @@ function Home() {
                     <p>this is the content</p>
                 </Drawer>
             
-
         </div>
     )
 }
