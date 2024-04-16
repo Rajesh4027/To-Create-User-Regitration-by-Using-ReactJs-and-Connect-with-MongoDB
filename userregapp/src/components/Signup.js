@@ -38,12 +38,12 @@ function Login() {
 
     return(
         <div className="login">
-            <form action="POST">
+            <form action="POST" >
              <fieldset id="login_sty">
                 <legend id="leg">Sign Up</legend>
                 <table>
                     <tr>
-                        <td colSpan={2} align="center"><input type="text" onChange={(e) => { setName(e.target.value) }} placeholder="Enter your name" /></td>
+                        <td colSpan={2} align="center"><input name="kivi" type="text" onChange={(e) => { setName(e.target.value) }} placeholder="Enter your name" /></td>
                     </tr>
                     <tr>
                         <td colSpan={2} align="center"><input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter the email" /></td>

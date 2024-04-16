@@ -19,7 +19,7 @@ function Login(){
             })
             .then(res=>{
                 if(res.data=="exist"){
-                    history("/Home")
+                    history("/home",{state:{id:email}})
                 }
                 else if(res.data=="notexist"){
                     alert("User have not sign up")
@@ -36,33 +36,34 @@ function Login(){
     }
 
     return(
-        <div className="login">
-            <form action="POST">
-             <fieldset id="login_sty">
-                <legend id="leg">Login</legend>
-                <table>
-                <tr>
-                    <td colSpan={2} align="center"><input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter the email" />
-               </td>
-                </tr>
-                <tr>
-                    <td colSpan={2} align="center"><input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Enter the password" />
-               </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"/>Remember Me</td>
-                    <td colSpan={1} id="for">Forget Password?</td>
-                </tr>
-                <tr>
-                    <td colSpan={2} align="center"><button onClick={submit}>SIGN IN</button></td>
-                </tr>
-                <tr>
-                    <td colSpan={2} align="center">Don't have an account?<Link to="/signup" id="signUp">SIGN UP</Link></td>
-                </tr>
-                </table>
-             </fieldset>
-            </form>
-        </div>
+        <div className="_contain vh-100 d-flex align-items-center justify-content-center">
+        <form action="POST">
+        <fieldset className="card px-5">
+            <div className="d-flex flex-column">
+                <div className="_main">
+                    <legend>Login</legend>
+                </div>
+                <div className="_main">
+                    <input type="email" className="form-control " onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter the email" />
+                </div>
+                <div className="_main">
+                    <input type="password" className="form-control" onChange={(e) => { setPassword(e.target.value) }} placeholder="Enter the password" />
+                </div>
+                <div className="_main d-flex justify-content-between">
+                    <span><input type="checkbox"/>Remember Me</span>
+                    <span>Forget Password?</span>
+                </div>
+                <div className="_main text-center">
+                    <button onClick={submit}>SIGN IN</button>
+                </div>
+                <div className="_main d-flex justify-content-between">
+                    <span>Don't have an account?</span>
+                    <span><Link to="/signup" id="signUp">SIGN UP</Link></span>
+                </div>
+            </div>
+        </fieldset>
+       </form>
+    </div>
     )
 }
 

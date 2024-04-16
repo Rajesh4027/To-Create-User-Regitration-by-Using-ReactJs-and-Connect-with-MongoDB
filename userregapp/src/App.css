@@ -5,7 +5,17 @@
     font-style: normal;
     margin: 0;
 }
-body{
+._contain{
+    background-color: #8364e8 ;
+    *{
+        padding: 5px;
+    }
+    ._main{
+        width: 450px;
+    }
+    
+}
+/* body{
     background: #8364e8;
     
 }
@@ -73,7 +83,7 @@ fieldset:hover{
     border: none;
     font-weight: bold;
     
-}
+} */
 .homepage{
     *{
         margin: 0;

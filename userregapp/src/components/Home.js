@@ -1,9 +1,11 @@
-import {useState} from "react"
+import React,{useState} from "react"
 import { IoSearch} from "react-icons/io5"
 import { FaCircleUser } from "react-icons/fa6"
 import {Drawer } from  "antd"
+import { useLocation, useNavigation } from "react-router-dom"
 
-function Home() {
+function Home(props) {
+    const location = useLocation()
     const [visible, setVisible] = useState(false);
     return(
         <div className="homepage">
@@ -22,18 +24,17 @@ function Home() {
              </div>
              <Drawer
                 visible={visible}
-                title="drawer title"
+                title={props.age}
                 footer={"Logout"}
-                closable={true}
                 onClose={() => {
                     setVisible(false);
                 }}
                 placement = "right"
                 >
-                    <p>this is the content</p>
+                
                 </Drawer>
             
         </div>
-    )
+    );
 }
 export default Home
