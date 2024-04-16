@@ -36,7 +36,7 @@ function Login(){
     }
 
     return(
-        <div className="_contain vh-100 d-flex align-items-center justify-content-center">
+        <div className="container-fluid vh-100 d-flex align-items-center justify-content-center ">
         <form action="POST">
         <fieldset className="card px-5">
             <div className="d-flex flex-column">
@@ -53,17 +53,18 @@ function Login(){
                     <span><input type="checkbox"/>Remember Me</span>
                     <span>Forget Password?</span>
                 </div>
-                <div className="_main text-center">
-                    <button onClick={submit}>SIGN IN</button>
+                <div className="_main text-center ">
+                    <button onClick={submit} className="rounded text-white">SIGN IN</button>
                 </div>
                 <div className="_main d-flex justify-content-between">
                     <span>Don't have an account?</span>
-                    <span><Link to="/signup" id="signUp">SIGN UP</Link></span>
+                    <span><Link to="/signup" id="signUp" className="_up rounded">SIGN UP</Link></span>
                 </div>
             </div>
         </fieldset>
        </form>
     </div>
+           
     )
 }
 

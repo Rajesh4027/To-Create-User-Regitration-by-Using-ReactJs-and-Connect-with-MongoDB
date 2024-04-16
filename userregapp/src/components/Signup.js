@@ -38,33 +38,43 @@ function Login() {
 
     return(
         <div className="login">
-            <form action="POST" >
-             <fieldset id="login_sty">
-                <legend id="leg">Sign Up</legend>
-                <table>
-                    <tr>
-                        <td colSpan={2} align="center"><input name="kivi" type="text" onChange={(e) => { setName(e.target.value) }} placeholder="Enter your name" /></td>
-                    </tr>
-                    <tr>
-                        <td colSpan={2} align="center"><input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter the email" /></td>
-                    </tr>
-                    <tr>
-                        <td colSpan={2} align="center"><input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Enter the password" /></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"/>Remember Me</td>
-                        <td colSpan={1} id="for">Forget Password?</td>
-                    </tr>
-                    <tr>
-                        <td colSpan={2} align="center"><button onClick={submit}>Register</button></td>
-                    </tr>
-                    <tr>
-                        <td colSpan={2} align="center">Keep me Logged in<Link to="/" id="signUp">LOGIN</Link></td>
-                    </tr>
-                </table>
-             </fieldset>
-            </form>
+        <div className="container-fluid vh-100 d-flex align-items-center justify-content-center ">
+               <form action="POST">
+               <fieldset className="card px-5">
+                   <div className="d-flex flex-column">
+                       <div className="_main">
+                           <legend>Sign Up</legend>
+                       </div>
+                       <div className="_main">
+                           <input type="email" className="form-control " onChange={(e) => { setName(e.target.value) }} placeholder="Enter the name" />
+                       </div>
+                       <div className="_main">
+                           <input type="text" className="form-control " onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter the email" />
+                       </div>
+                       <div className="_main">
+                           <input type="password" className="form-control" onChange={(e) => { setPassword(e.target.value) }} placeholder="Enter the password" />
+                       </div>
+                       <div className="_main d-flex justify-content-between">
+                           <span><input type="checkbox"/>Remember Me</span>
+                           <span>Forget Password?</span>
+                       </div>
+                       <div className="_main text-center ">
+                           <button className="rounded text-white" onClick={submit}>Register</button>
+                       </div>
+                       <div className="_main d-flex justify-content-between">
+                           <span>Keep me Logged in</span>
+                           <span><Link to="/" id="signUp" className="_up rounded">LOGIN</Link></span>
+                       </div>
+                   </div>
+               </fieldset>
+              </form>
+           </div>
         </div>
+
+
+
+
+        
     )
 }
 

@@ -5,7 +5,7 @@
     font-style: normal;
     margin: 0;
 }
-._contain{
+.container-fluid{
     background-color: #8364e8 ;
     *{
         padding: 5px;
@@ -13,117 +13,36 @@
     ._main{
         width: 450px;
     }
-    
-}
-/* body{
-    background: #8364e8;
-    
-}
-form{
-    margin-top: 200px;
-}
-table{
-    margin:auto;
-    
-}
-fieldset{
-    margin: 0 auto;
-    width: 450px;
-    border-radius: 20px;
-    background-color: white;
-    font-size: 20px;
-    transition: 1s;
-}
-#leg{
-    background-color: #0047AB;
-    color: white;
-    font-size: medium;
-    padding: 5px 10px;
-    border-radius: 10px;
-}
-td{
-    font-size: 15px;
-    padding-top:10px;
-}
-input[type="email"],input[type="password"],input[type="text"]{
-    width: 390px;
-    padding: 10px;
-    border: none;
-    box-shadow: 0 1.4px #0047AB ;
-}
-input[type="email"]:focus,input[type="password"]:focus,input[type="text"]:focus{
-    outline: none;
-}
-#for{
-    text-align: right;
-}
-button{
-    padding: 10px 20px;
-    background-color: #8364e8;
-    color: white;
-    border: none;
-}
-button,input[type="email"],input[type="password"]{
-    transition: 0.2s;
-}
-input[type="email"]:hover,input[type="password"]:hover,button:hover,#leg:hover,input[type="text"]:hover{
-    box-shadow: 0 0 8px #0047AB;
-    transform: scale(1);
-    font-weight: bold;
-}
-fieldset:hover{
-    transform: scale(1.2);
-}
-#signUp{
-    padding: 5px;
-    text-decoration: none;
-}
-#signUp:hover{
-    color: #0047AB;
-    border: none;
-    font-weight: bold;
-    
-} */
-.homepage{
-    *{
-        margin: 0;
-    }div{
-        padding: 20px 10px;
-        background-color: #fff;
-        text-align: right;
-        margin: 10px 20px;
-        border-radius: 10px;
+    fieldset{
+    background-color: aliceblue;
+    }
+    legend{
+        color: #0047AB;
+    }
+    button{
+        border: none;
+        background-color: #0073CF;
+        padding: 6px 15px;
+
+    }
+    button:hover{
+        box-shadow: 0 0 5px #0047AB;
+        background-color: #0047AB;
         
     }
-    div>a{
-        margin-left: 20px;
+    ._up{
+        background-color: #f28500;
+        color: white;
+        padding: 6px 15px;
+        border: none;
         text-decoration: none;
-        background-color:  #0047AB;
-        border-radius: 15px;
-        padding: 8px 18px;
-        color: white;
-             
+
     }
-    div>a:hover{
-        background-color: blue;
-        color: white;
-        box-shadow: 0 0 10px #0047AB;
+    ._up:hover{
+        background-color: #ff6700;
+        box-shadow: 0 0 5px #0047AB;
     }
-    span{
-        padding-right: 65px;
-        font-weight: bold;
-        position: static;
-    }
-    .he{
-        margin: 0px 14px -9px;
-        cursor: pointer;
-    }
-    #helo{
-        font-size: 30px;
-        margin: 0px 11px -9px;
-        cursor: pointer;
-    }
-    #im{
-        margin-bottom: -20px;
-    }
+}
+.homepage{
+    
 }
